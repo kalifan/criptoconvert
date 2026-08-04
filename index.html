@@ -118,8 +118,8 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;background-im
 .sh-li{background:#0A66C2;}
 .sh-rd{background:#FF4500;}
 .sh-email{background:#6b7280;}
-.sh-copy{background:var(--surface2);border:1px solid var(--border);}
-.sh-copy svg{fill:var(--muted);}
+.sh-copy{background:var(--surf2);border:1px solid var(--brd);}
+.sh-copy svg{stroke:var(--muted);}
 .copy-toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--green);color:#000;font-family:'Space Mono',monospace;font-size:.7rem;font-weight:700;padding:8px 18px;border-radius:20px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:999;}
 .copy-toast.show{opacity:1;}
 
@@ -140,50 +140,32 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;background-im
 
   <!-- SHARE COLUMN -->
   <div class="share-col">
-    <!-- SHARE PANEL -->
     <div class="share-panel">
       <div class="share-title">Share</div>
-
-      <!-- WhatsApp -->
       <a class="share-btn sh-wa" id="sh-wa" href="#" target="_blank" title="WhatsApp">
         <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.121 1.533 5.857L0 24l6.335-1.509A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.651-.502-5.178-1.381l-.371-.22-3.861.92.977-3.763-.242-.387A9.959 9.959 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
       </a>
-
-      <!-- Telegram -->
       <a class="share-btn sh-tg" id="sh-tg" href="#" target="_blank" title="Telegram">
         <svg viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
       </a>
-
-      <!-- X / Twitter -->
       <a class="share-btn sh-tw" id="sh-tw" href="#" target="_blank" title="X / Twitter">
         <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
       </a>
-
-      <!-- Facebook -->
       <a class="share-btn sh-fb" id="sh-fb" href="#" target="_blank" title="Facebook">
         <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
       </a>
-
-      <!-- LinkedIn -->
       <a class="share-btn sh-li" id="sh-li" href="#" target="_blank" title="LinkedIn">
         <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
       </a>
-
-      <!-- Reddit -->
       <a class="share-btn sh-rd" id="sh-rd" href="#" target="_blank" title="Reddit">
         <svg viewBox="0 0 24 24"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>
       </a>
-
-      <!-- Email -->
       <a class="share-btn sh-email" id="sh-email" href="#" title="Email">
         <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
       </a>
-
-      <!-- Copy Link -->
       <button class="share-btn sh-copy" id="sh-copy" onclick="copyLink()" title="Copy link">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
       </button>
-
     </div>
   </div>
 
@@ -201,8 +183,8 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;background-im
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
         </button>
         <div class="tabs">
-          <button class="tab on" id="tFiat"   onclick="switchTab('fiat')">$</button>
-          <button class="tab"    id="tCrypto" onclick="switchTab('crypto')">₿</button>
+          <button class="tab on" id="tFiat" onclick="switchTab('fiat')">$</button>
+          <button class="tab" id="tCrypto" onclick="switchTab('crypto')">₿</button>
         </div>
         <button class="tbtn hide" id="btnSearch" onclick="document.getElementById('si').focus()">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
@@ -212,7 +194,6 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;background-im
       <!-- HOME SCREEN -->
       <div class="scr on" id="scrHome">
         <div class="rlist" id="rlist"></div>
-        <!-- Binance Affiliate Banner — replace href with your referral link -->
         <a class="bnr-affiliate" href="https://www.binance.com/referral/earn-together?ref=TU_CODIGO" target="_blank" rel="noopener">
           <div class="bnr-left">
             <div class="bnr-logo">B</div>
@@ -224,7 +205,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;background-im
           <div class="bnr-btn">Open →</div>
         </a>
         <div class="addbtnwrap">
-          <button class="addbtn" onclick="switchTab('fiat')">
+          <button class="addbtn" onclick="openSelectScreen()">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
             Add Currency
           </button>
@@ -262,6 +243,9 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;background-im
   </div>
 
 </div>
+
+<div class="copy-toast" id="toast">Link copied to clipboard!</div>
+
 <script>
 /* ==============================================
    DATA
@@ -286,7 +270,7 @@ const FIATS = [
   {s:'BAM',n:'Bosnia Mark',f:'🇧🇦'},{s:'BDT',n:'Bangladeshi Taka',f:'🇧🇩'},
   {s:'BGN',n:'Bulgarian Lev',f:'🇧🇬'},{s:'BHD',n:'Bahraini Dinar',f:'🇧🇭'},
   {s:'BOB',n:'Bolivian Boliviano',f:'🇧🇴'},{s:'BWP',n:'Botswanan Pula',f:'🇧🇼'},
-  {s:'BYN',n:'Belarusian Ruble',f:'🇧🇾'},{s:'BZD',n:'Belize Dollar',f:'🇧🇿'},
+  {s:'BYN',n:'Belarusian Ruble',f:'🇧🇾'},{s:'BZD',n:'Belize Dollar',f:'🇧ZD'},
   {s:'CRC',n:'Costa Rican Colón',f:'🇨🇷'},{s:'DOP',n:'Dominican Peso',f:'🇩🇴'},
   {s:'DZD',n:'Algerian Dinar',f:'🇩🇿'},{s:'GEL',n:'Georgian Lari',f:'🇬🇪'},
   {s:'GHS',n:'Ghanaian Cedi',f:'🇬🇭'},{s:'GTQ',n:'Guatemalan Quetzal',f:'🇬🇹'},
@@ -306,7 +290,7 @@ const FIATS = [
   {s:'THB',n:'Thai Baht',f:'🇹🇭'},{s:'TWD',n:'New Taiwan Dollar',f:'🇹🇼'},
   {s:'UAH',n:'Ukrainian Hryvnia',f:'🇺🇦'},{s:'UGX',n:'Ugandan Shilling',f:'🇺🇬'},
   {s:'UYU',n:'Uruguayan Peso',f:'🇺🇾'},{s:'VND',n:'Vietnamese Dong',f:'🇻🇳'},
-  {s:'ZMW',n:'Zambian Kwacha',f:'🇿🇲'},
+  {s:'ZMW',n:'Zambian Kwacha',f:'🇿🇲'}
 ];
 
 const CRYPTOS = [
@@ -329,30 +313,18 @@ const CRYPTOS = [
   {s:'NEAR',n:'NEAR Protocol',ic:'N',bg:'#00C08B22',co:'#00C08B',id:'near'},
   {s:'UNI', n:'Uniswap',      ic:'U',bg:'#FF007A22',co:'#FF007A',id:'uniswap'},
   {s:'XLM', n:'Stellar',      ic:'✦',bg:'#08B5E522',co:'#08B5E5',id:'stellar'},
-  {s:'MATIC',n:'Polygon',     ic:'◆',bg:'#8247E522',co:'#8247E5',id:'matic-network'},
+  {s:'MATIC',n:'Polygon',     ic:'◆',bg:'#8247E522',co:'#8247E5',id:'matic-network'}
 ];
 
-/* ==============================================
-   STATE
-   list[]   = [{s, t}]   t='f' fiat | t='c' crypto
-   baseIdx  = which row is being edited
-   baseAmt  = the number in that row
-   fR{}     = fiat rates  (1 USD = X fiat)
-   cP{}     = crypto prices (1 crypto = X USD)
-============================================== */
-let list    = [];
+/* STATE */
+let list    = [{s:'USD',t:'f'},{s:'BTC',t:'c'},{s:'EUR',t:'f'},{s:'ARS',t:'f'}];
 let baseIdx = 0;
 let baseAmt = 1;
-let fR = {};
+let fR = {USD: 1};
 let cP = {};
 let curTab = 'fiat';
-let lastUpd = null;
 
-/* ==============================================
-   CONVERSION
-   Everything via USD.
-   toUSD(s,t) = how many USD is 1 unit of s
-============================================== */
+/* CONVERSION LOGIC */
 function toUSD(s, t) {
   if (t === 'c') return cP[s] > 0 ? cP[s] : null;
   return fR[s] > 0 ? 1 / fR[s] : null;
@@ -365,10 +337,7 @@ function calc(fromS, fromT, toS, toT, amount) {
   return (amount * a) / b;
 }
 
-
-/* ==============================================
-   FORMAT — NEVER scientific notation
-============================================== */
+/* FORMATTING */
 function fmt(n) {
   if (n === null || n === undefined || isNaN(n) || !isFinite(n)) return '0';
   if (n === 0) return '0';
@@ -380,8 +349,7 @@ function fmt(n) {
   if (abs >= 0.01)  return n.toFixed(6);
   if (abs >= 0.0001)return n.toFixed(8);
   let str = n.toFixed(18);
-  str = str.replace(/0+$/, '').replace(/\.$/, '');
-  return str;
+  return str.replace(/0+$/, '').replace(/\.$/, '');
 }
 
 function fmtRate(n) {
@@ -392,25 +360,21 @@ function fmtRate(n) {
   if (abs >= 1)    return n.toLocaleString('en-US', {minimumFractionDigits:4, maximumFractionDigits:4});
   if (abs >= 0.001)return n.toFixed(7);
   let str = n.toFixed(18);
-  str = str.replace(/0+$/, '').replace(/\.$/, '');
-  return str;
+  return str.replace(/0+$/, '').replace(/\.$/, '');
 }
 
-/* ==============================================
-   DRAW HOME LIST
-============================================== */
+/* DRAW HOME LIST */
 function drawHome() {
   const el = document.getElementById('rlist');
 
   if (list.length === 0) {
     el.innerHTML = `<div class="empty">
       <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="9"/><path d="M12 8v4m0 4h.01"/></svg>
-      <div>List is empty.<br>Use <b>$</b> or <b>₿</b> to add currencies.</div>
+      <div>List is empty.<br>Use <b>Add Currency</b> to add items.</div>
     </div>`;
     return;
   }
 
-  // Guard baseIdx
   if (baseIdx < 0 || baseIdx >= list.length) baseIdx = 0;
   if (baseAmt <= 0 || isNaN(baseAmt)) baseAmt = 1;
 
@@ -419,16 +383,14 @@ function drawHome() {
 
   list.forEach(function(item, i) {
     const isBase = (i === baseIdx);
-    const mc = CRYPTOS.find(function(c){ return c.s === item.s; });
-    const mf = FIATS.find(function(f){ return f.s === item.s; });
+    const mc = CRYPTOS.find(c => c.s === item.s);
+    const mf = FIATS.find(f => f.s === item.s);
 
     let icon;
     if (item.t === 'c' && mc) {
-      // Use CoinGecko token image
-      icon = '<div class="ricon" style="background:'+mc.bg+';color:'+mc.co+';font-size:1rem;font-weight:700;">'+mc.ic+'</div>';
+      icon = `<div class="ricon" style="background:${mc.bg};color:${mc.co};">${mc.ic}</div>`;
     } else {
-      // Fiat: show flag emoji large
-      icon = '<div class="ricon" style="background:#ffffff0d;font-size:1.35rem;line-height:1;">'+(mf ? mf.f : '💱')+'</div>';
+      icon = `<div class="ricon" style="background:#ffffff0d;font-size:1.35rem;">${mf ? mf.f : '💱'}</div>`;
     }
 
     const name = item.t === 'c' ? (mc ? mc.n : item.s) : (mf ? mf.n : item.s);
@@ -441,38 +403,34 @@ function drawHome() {
       const result = calc(base.s, base.t, item.s, item.t, baseAmt);
       valStr  = result !== null ? fmt(result) : '—';
       const r1 = calc(base.s, base.t, item.s, item.t, 1);
-      rateStr = r1 !== null ? '1 '+base.s+' = '+fmtRate(r1)+' '+item.s : 'Rate unavailable';
+      rateStr = r1 !== null ? `1 ${base.s} = ${fmtRate(r1)} ${item.s}` : 'Rate unavailable';
     }
 
-    html += '<div class="rrow'+(isBase?' base':'')+'">'
-      + '<div class="rleft">'+icon+'<div><div class="rsym">'+item.s+'</div><div class="rname">'+name+'</div></div></div>'
-      + '<div class="rwrap">'
-      +   '<input class="rinput" type="text" inputmode="decimal" data-i="'+i+'" value="'+valStr+'" placeholder="0" oninput="onInput(this)" onfocus="onFocus(this)">'
-      +   '<div class="rrate" id="rate'+i+'">'+rateStr+'</div>'
-      + '</div>'
-      + '<button class="rdel" onclick="delItem('+i+')">✕</button>'
-      + '</div>';
+    html += `<div class="rrow${isBase ? ' base' : ''}">
+      <div class="rleft">${icon}<div><div class="rsym">${item.s}</div><div class="rname">${name}</div></div></div>
+      <div class="rwrap">
+        <input class="rinput" type="text" inputmode="decimal" data-i="${i}" value="${valStr}" placeholder="0" oninput="onInput(this)" onfocus="onFocus(this)">
+        <div class="rrate" id="rate${i}">${rateStr}</div>
+      </div>
+      <button class="rdel" onclick="delItem(${i})">✕</button>
+    </div>`;
   });
 
   el.innerHTML = html;
 }
 
-/* ==============================================
-   INPUT EVENTS
-============================================== */
+/* INPUT HANDLERS */
 function onFocus(inp) {
   const i = parseInt(inp.dataset.i);
   if (i === baseIdx) return;
-  // Switch base: convert current amount into new base's units
   const old = list[baseIdx];
   const nw  = list[i];
   const converted = calc(old.s, old.t, nw.s, nw.t, baseAmt);
   baseIdx = i;
   if (converted !== null) baseAmt = converted;
   drawHome();
-  // Re-focus after redraw
-  setTimeout(function() {
-    const inp2 = document.querySelector('.rinput[data-i="'+i+'"]');
+  setTimeout(() => {
+    const inp2 = document.querySelector(`.rinput[data-i="${i}"]`);
     if (inp2) { inp2.focus(); inp2.select(); }
   }, 0);
 }
@@ -485,24 +443,21 @@ function onInput(inp) {
 
   const base = list[baseIdx];
 
-  // Update all OTHER rows directly in the DOM (no redraw = no focus loss)
-  document.querySelectorAll('.rinput').forEach(function(el) {
+  document.querySelectorAll('.rinput').forEach(el => {
     const j = parseInt(el.dataset.i);
     if (j === i) return;
     const item = list[j];
     if (!item) return;
     const result = calc(base.s, base.t, item.s, item.t, baseAmt);
     el.value = result !== null ? fmt(result) : '—';
-    // Update rate label
-    const rateEl = document.getElementById('rate'+j);
+    const rateEl = document.getElementById('rate' + j);
     if (rateEl) {
       const r1 = calc(base.s, base.t, item.s, item.t, 1);
-      rateEl.textContent = r1 !== null ? '1 '+base.s+' = '+fmtRate(r1)+' '+item.s : 'Rate unavailable';
+      rateEl.textContent = r1 !== null ? `1 ${base.s} = ${fmtRate(r1)} ${item.s}` : 'Rate unavailable';
     }
   });
 
-  // Update base highlight
-  document.querySelectorAll('.rrow').forEach(function(row, j) {
+  document.querySelectorAll('.rrow').forEach((row, j) => {
     row.classList.toggle('base', j === baseIdx);
     const rinp = row.querySelector('.rinput');
     if (rinp) rinp.style.color = j === baseIdx ? 'var(--acc)' : 'var(--acc2)';
@@ -512,13 +467,22 @@ function onInput(inp) {
 function delItem(i) {
   list.splice(i, 1);
   baseIdx = 0;
-  baseAmt = 1;
   drawHome();
 }
 
-/* ==============================================
-   SELECT SCREEN
-============================================== */
+/* SELECT SCREEN */
+function makeRow(sym, name, rate, iconHtml, type, isAdded) {
+  return `<div class="crow" onclick="toggleItem('${sym}', '${type}')">
+    ${iconHtml}
+    <div class="cinfo">
+      <div class="csym">${sym}</div>
+      <div class="cname">${name}</div>
+      <div class="crate">${rate}</div>
+    </div>
+    <div class="cact ${isAdded ? 'crem' : 'cadd'}">${isAdded ? '✓' : '+'}</div>
+  </div>`;
+}
+
 function drawSelectList(q) {
   const el    = document.getElementById('slist');
   const noRes = document.getElementById('nores');
@@ -528,26 +492,25 @@ function drawSelectList(q) {
 
   if (curTab === 'fiat') {
     html += '<div class="sheader">FIAT CURRENCIES</div>';
-    FIATS.forEach(function(item, i) {
+    FIATS.forEach(item => {
       const m = !sq || item.s.toLowerCase().includes(sq) || item.n.toLowerCase().includes(sq);
       if (m) vis++;
-      const added = list.some(function(x){ return x.s === item.s && x.t === 'f'; });
-      const rate  = fR[item.s] ? '1 USD = '+fR[item.s].toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:4})+' '+item.s : '';
-      html += makeRow(item.s, item.n, rate,
-        '<div class="cicon" style="background:#ffffff12;font-size:1.1rem">'+item.f+'</div>',
-        'f', added, !m);
+      const added = list.some(x => x.s === item.s && x.t === 'f');
+      const rate  = fR[item.s] ? `1 USD = ${fR[item.s].toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:4})} ${item.s}` : '';
+      if (m) {
+        html += makeRow(item.s, item.n, rate, `<div class="cicon" style="background:#ffffff12;">${item.f}</div>`, 'f', added);
+      }
     });
   } else {
     html += '<div class="sheader">CRYPTOCURRENCIES</div>';
-    CRYPTOS.forEach(function(item, i) {
+    CRYPTOS.forEach(item => {
       const m = !sq || item.s.toLowerCase().includes(sq) || item.n.toLowerCase().includes(sq);
       if (m) vis++;
-      const added = list.some(function(x){ return x.s === item.s && x.t === 'c'; });
-      const p    = cP[item.s];
-      const rate = p ? '1 '+item.s+' = $'+fmt(p)+' USD' : '';
-      html += makeRow(item.s, item.n, rate,
-        '<div class="cicon" style="background:'+item.bg+';color:'+item.co+'">'+item.ic+'</div>',
-        'c', added, !m);
+      const added = list.some(x => x.s === item.s && x.t === 'c');
+      const rate  = cP[item.s] ? `1 ${item.s} = $${cP[item.s].toLocaleString('en-US')}` : '';
+      if (m) {
+        html += makeRow(item.s, item.n, rate, `<div class="cicon" style="background:${item.bg};color:${item.co};">${item.ic}</div>`, 'c', added);
+      }
     });
   }
 
@@ -555,42 +518,29 @@ function drawSelectList(q) {
   noRes.style.display = vis === 0 ? 'block' : 'none';
 }
 
-function makeRow(sym, name, rate, iconEl, type, added, hidden) {
-  const actCls  = added ? 'cact crem' : 'cact cadd';
-  const actIcon = added
-    ? '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>'
-    : '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>';
-  return '<div class="crow'+(hidden?' hid':'')+'" onclick="toggle(\''+sym+'\',\''+type+'\')">'+
-    iconEl+
-    '<div class="cinfo"><div class="csym">'+sym+'</div><div class="cname">'+name+'</div><div class="crate">'+rate+'</div></div>'+
-    '<div class="'+actCls+'">'+actIcon+'</div>'+
-    '</div>';
+function toggleItem(sym, type) {
+  const idx = list.findIndex(x => x.s === sym && x.t === type);
+  if (idx >= 0) {
+    list.splice(idx, 1);
+  } else {
+    list.push({s: sym, t: type});
+  }
+  drawSelectList(document.getElementById('si').value);
+  drawHome();
 }
 
-function toggle(sym, type) {
-  const idx = list.findIndex(function(x){ return x.s === sym && x.t === type; });
-  if (idx === -1) {
-    list.push({s: sym, t: type});
-  } else {
-    list.splice(idx, 1);
-  }
-  // Always reset base to row 0, amount 1 — guarantees list renders correctly always
-  baseIdx = 0;
-  baseAmt = 1;
-  // Refresh the select list to show updated checkmarks
+function switchTab(t) {
+  curTab = t;
+  document.getElementById('tFiat').classList.toggle('on', t === 'fiat');
+  document.getElementById('tCrypto').classList.toggle('on', t === 'crypto');
   drawSelectList(document.getElementById('si').value);
 }
 
-/* ==============================================
-   NAVIGATION
-============================================== */
-function showSelectScreen() {
+function openSelectScreen() {
   document.getElementById('scrHome').classList.remove('on');
   document.getElementById('scrSelect').classList.add('on');
   document.getElementById('btnBack').classList.remove('hide');
   document.getElementById('btnSearch').classList.remove('hide');
-  document.getElementById('si').value = '';
-  document.getElementById('sc').classList.remove('vis');
   drawSelectList('');
 }
 
@@ -599,14 +549,6 @@ function goBack() {
   document.getElementById('scrHome').classList.add('on');
   document.getElementById('btnBack').classList.add('hide');
   document.getElementById('btnSearch').classList.add('hide');
-  drawHome();
-}
-
-function switchTab(t) {
-  curTab = t;
-  document.getElementById('tFiat').classList.toggle('on', t === 'fiat');
-  document.getElementById('tCrypto').classList.toggle('on', t === 'crypto');
-  showSelectScreen();
 }
 
 function onSearch(val) {
@@ -615,118 +557,73 @@ function onSearch(val) {
 }
 
 function clearSearch() {
-  document.getElementById('si').value = '';
+  const si = document.getElementById('si');
+  si.value = '';
   document.getElementById('sc').classList.remove('vis');
   drawSelectList('');
-  document.getElementById('si').focus();
 }
 
-/* ==============================================
-   FETCH
-============================================== */
-async function loadAll() {
-  await Promise.all([loadFiat(), loadCrypto()]);
-  drawHome();
-  if (document.getElementById('scrSelect').classList.contains('on')) {
-    drawSelectList(document.getElementById('si').value);
-  }
-  const t = lastUpd ? lastUpd.toLocaleTimeString('en-US') : '—';
-  const txt = 'Live · '+t+' · Binance + ExchangeRate-API';
-  document.getElementById('statusbar').textContent = txt;
-  document.getElementById('liveText').textContent  = txt;
-}
-
-async function loadFiat() {
+/* FETCH REAL-TIME RATES */
+async function fetchRates() {
+  const sb = document.getElementById('statusbar');
+  const lt = document.getElementById('liveText');
   try {
-    const r = await fetch('https://api.exchangerate-api.com/v4/latest/USD');
-    if (!r.ok) throw 0;
-    fR = (await r.json()).rates;
-    lastUpd = new Date();
-  } catch {
-    fR = {USD:1,ARS:1380,EUR:0.92,GBP:0.79,BRL:5.1,JPY:155,MXN:17.2,
-      CLP:950,COP:4100,AED:3.67,CHF:0.89,CAD:1.36,AUD:1.53,CNY:7.25,
-      INR:83.5,KRW:1340,SGD:1.35,HKD:7.82,NOK:10.6,SEK:10.4,DKK:6.9,
-      PLN:4.0,TRY:32,ZAR:18.6,NGN:1600,EGP:48,MAD:10,
-      DOP:60,GTQ:7.8,HNL:25,BOB:6.9,PYG:7500,PEN:3.7,UYU:39,
-      CRC:510,NIO:36.6,PAB:1,BZD:2,JMD:155,TTD:6.8,BBD:2,
-      ILS:3.7,JOD:0.71,KWD:0.31,BHD:0.38,OMR:0.38,SAR:3.75,QAR:3.64,
-      KZT:450,KGS:88,UZS:12700,AZN:1.7,GEL:2.7,AMD:390,
-      THB:35,MYR:4.7,PHP:58,IDR:16200,VND:25400,KRW:1340,
-      PKR:278,INR:83.5,LKR:300,NPR:133,BDT:110,
-      UAH:38,RUB:90,BYN:3.3,MDL:17.8,RON:4.6,BGN:1.8,
-      HUF:360,CZK:23,PLN:4.0,DKK:6.9,SEK:10.4,NOK:10.6,ISK:138,
-      ZAR:18.6,NGN:1600,KES:130,GHS:15,TZS:2550,UGX:3700,
-      MAD:10,DZD:134,EGP:48,TND:3.1,LYD:4.8,
-      NZD:1.65,SGD:1.35,HKD:7.82,TWD:32,
-      XAF:600,XOF:600,RWF:1300,ZMW:26,AOA:920};
-  }
-}
+    // 1. Fetch Fiat Rates
+    const resF = await fetch('https://open.er-api.com/v6/latest/USD');
+    const dataF = await resF.json();
+    if (dataF && dataF.rates) {
+      fR = dataF.rates;
+    }
 
-async function loadCrypto() {
-  try {
-    // Binance public API — real-time prices, same as Binance exchange
-    const symbols = CRYPTOS.map(function(c){ return '"'+c.s+'USDT"'; }).join(',');
-    const r = await fetch('https://api.binance.com/api/v3/ticker/price?symbols=['+symbols+']');
-    if (!r.ok) throw 0;
-    const d = await r.json();
-    d.forEach(function(item) {
-      const sym = item.symbol.replace('USDT','');
-      const price = parseFloat(item.price);
-      if (price > 0) cP[sym] = price;
+    // 2. Fetch Crypto Prices
+    const ids = CRYPTOS.map(c => c.id).join(',');
+    const resC = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${ids}&vs_currencies=usd`);
+    const dataC = await resC.json();
+    CRYPTOS.forEach(c => {
+      if (dataC[c.id] && dataC[c.id].usd) {
+        cP[c.s] = dataC[c.id].usd;
+      }
     });
-    // USDT and USDC are always 1:1 USD
-    cP['USDT'] = 1;
-    cP['USDC'] = 1;
-    lastUpd = new Date();
-  } catch {
-    cP = {BTC:95000,ETH:3200,SOL:185,BNB:610,TRX:0.12,USDT:1,
-      USDC:1,XRP:2.3,DOGE:0.18,ADA:0.45,DOT:7.2,AVAX:35,LINK:18,
-      MATIC:0.55,LTC:85,BCH:480,ATOM:9,NEAR:7,UNI:10,XLM:0.12};
+
+    const now = new Date().toLocaleTimeString();
+    sb.textContent = `Live rates updated at ${now}`;
+    lt.textContent = `Rates live (${now})`;
+    drawHome();
+  } catch (err) {
+    console.error('Fetch error:', err);
+    sb.textContent = 'Failed to load live rates. Using cached data.';
+    lt.textContent = 'Offline / Cached';
   }
 }
 
-
-/* ==============================================
-   SHARE
-============================================== */
-function updateShareLinks() {
-  const url  = encodeURIComponent(window.location.href);
-  const text = encodeURIComponent('Check out CriptoConvert — real-time currency & crypto converter!');
-
-  const links = {
-    'sh-wa':    'https://wa.me/?text='+text+'%20'+url,
-    'sh-tg':    'https://t.me/share/url?url='+url+'&text='+text,
-    'sh-tw':    'https://twitter.com/intent/tweet?text='+text+'&url='+url,
-    'sh-fb':    'https://www.facebook.com/sharer/sharer.php?u='+url,
-    'sh-li':    'https://www.linkedin.com/sharing/share-offsite/?url='+url,
-    'sh-rd':    'https://reddit.com/submit?url='+url+'&title='+text,
-    'sh-email': 'mailto:?subject=CriptoConvert&body='+text+'%20'+url,
-  };
-
-  Object.keys(links).forEach(function(id) {
-    const el = document.getElementById(id);
-    if (el) el.href = links[id];
-  });
+/* SHARE UTILS */
+function setupShareLinks() {
+  const url = encodeURIComponent(window.location.href);
+  const text = encodeURIComponent('Check out this live Crypto & Fiat Currency Converter!');
+  document.getElementById('sh-wa').href = `https://api.whatsapp.com/send?text=${text}%20${url}`;
+  document.getElementById('sh-tg').href = `https://t.me/share/url?url=${url}&text=${text}`;
+  document.getElementById('sh-tw').href = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
+  document.getElementById('sh-fb').href = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+  document.getElementById('sh-li').href = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+  document.getElementById('sh-rd').href = `https://reddit.com/submit?url=${url}&title=${text}`;
+  document.getElementById('sh-email').href = `mailto:?subject=${text}&body=${url}`;
 }
 
 function copyLink() {
-  navigator.clipboard.writeText(window.location.href).then(function() {
-    const t = document.getElementById('copyToast');
-    t.classList.add('show');
-    setTimeout(function(){ t.classList.remove('show'); }, 2000);
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    const toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 2000);
   });
 }
 
-// Build share links on load
-updateShareLinks();
-
-/* ==============================================
-   BOOT
-============================================== */
-drawHome(); // show empty state immediately
-loadAll();
-setInterval(loadAll, 10000); // Binance real-time: refresh every 10s
+/* INITIALIZATION */
+window.addEventListener('DOMContentLoaded', () => {
+  setupShareLinks();
+  fetchRates();
+  drawHome();
+  setInterval(fetchRates, 60000); // Auto refresh every 60s
+});
 </script>
-<div class="copy-toast" id="copyToast">Link copied!</div>
 </body>
 </html>
